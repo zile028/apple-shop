@@ -67,6 +67,16 @@ nav ul li {
   transition: 0.4s ease;
 }
 
+@media (max-width: 767px) {
+  nav ul li {
+    margin: 0 10px;
+  }
+  nav ul li:first-child {
+    width: 100%;
+    text-align: center;
+  }
+}
+
 nav ul li:hover {
   color: #6e2594;
 }
@@ -116,10 +126,22 @@ header h1::after {
   background: #ecd444;
 }
 
+@media (max-width: 767px) {
+  header h1 {
+    font-size: 4rem;
+  }
+}
+
 header p {
   font-size: 1.8rem;
   font-weight: 700;
   margin-bottom: 30px;
+}
+
+@media (max-width: 767px) {
+  header p {
+    font-size: 1.3rem;
+  }
 }
 
 header button {
@@ -133,6 +155,12 @@ header button {
   cursor: pointer;
   -webkit-transition: 0.4s ease;
   transition: 0.4s ease;
+}
+
+@media (max-width: 767px) {
+  header button {
+    font-size: 1.3rem;
+  }
 }
 
 header button:hover {
@@ -166,6 +194,14 @@ header button:hover {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 50%;
           flex: 0 0 50%;
+}
+
+@media (max-width: 767px) {
+  .services article {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+  }
 }
 
 .services article:nth-child(1) {
@@ -212,6 +248,12 @@ header button:hover {
   transition: 0.4s ease;
 }
 
+@media (max-width: 767px) {
+  .services article button {
+    font-size: 1.3rem;
+  }
+}
+
 .services article button:hover {
   background-color: #6e2594;
   border: 3px solid #6e2594;
@@ -239,16 +281,42 @@ header button:hover {
   height: 450px;
 }
 
+@media (max-width: 767px) {
+  .model article {
+    height: auto;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 .model article:nth-child(even) img {
   -webkit-box-ordinal-group: 3;
       -ms-flex-order: 2;
           order: 2;
 }
 
+@media (max-width: 767px) {
+  .model article:nth-child(even) img {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+}
+
 .model article:nth-child(even) div {
   -webkit-box-ordinal-group: 2;
       -ms-flex-order: 1;
           order: 1;
+}
+
+@media (max-width: 767px) {
+  .model article:nth-child(even) div {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
 }
 
 .model article img {
@@ -260,12 +328,15 @@ header button:hover {
      object-fit: cover;
 }
 
+@media (max-width: 767px) {
+  .model article img {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+  }
+}
+
 .model article div {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 60%;
-          flex: 0 0 60%;
-  padding: 0px 90px;
-  color: #444;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -281,6 +352,20 @@ header button:hover {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 60%;
+          flex: 0 0 60%;
+  padding: 0px 90px;
+  color: #444;
+}
+
+@media (max-width: 767px) {
+  .model article div {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+    padding: 20px 30px;
+  }
 }
 
 .model article div h3 {
@@ -306,6 +391,12 @@ header button:hover {
   background-color: #ecd444;
   text-align: center;
   color: #444;
+}
+
+@media (max-width: 767px) {
+  .cta {
+    padding: 50px 0;
+  }
 }
 
 .cta h2 {
@@ -340,6 +431,12 @@ header button:hover {
   transition: 0.4s ease;
 }
 
+@media (max-width: 767px) {
+  .cta button {
+    font-size: 1.3rem;
+  }
+}
+
 .cta button:hover {
   background-color: #444;
   border: 3px solid transparent;
@@ -368,6 +465,15 @@ footer {
   padding: 70px 5% 60px;
 }
 
+@media (max-width: 767px) {
+  footer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 footer article:first-child {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 60%;
@@ -378,6 +484,12 @@ footer article:last-child {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 38%;
           flex: 0 0 38%;
+}
+
+@media (max-width: 767px) {
+  footer article:last-child {
+    margin-top: 30px;
+  }
 }
 
 footer article h3 {
@@ -405,6 +517,12 @@ footer article button {
   -webkit-transition: 0.4s ease;
   transition: 0.4s ease;
   margin-top: 30px;
+}
+
+@media (max-width: 767px) {
+  footer article button {
+    font-size: 1.3rem;
+  }
 }
 
 footer article button:hover {

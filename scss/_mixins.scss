@@ -23,6 +23,9 @@
     font-family: $lato;
     cursor: pointer;
     transition: $transition;
+    @media (max-width: 767px) {
+        font-size: 1.3rem;
+    }
     &:hover {
         background-color: $bgHover;
         border: 3px solid $borderHover;

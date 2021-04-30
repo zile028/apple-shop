@@ -52,6 +52,13 @@ nav {
             font-weight: 400;
             margin: 0 50px;
             transition: $transition;
+            @media (max-width: 767px) {
+                margin: 0 10px;
+                &:first-child {
+                    width: 100%;
+                    text-align: center;
+                }
+            }
             &:hover {
                 color: $purple;
             }
@@ -74,11 +81,17 @@ header {
         font-weight: 700;
         font-size: 6rem;
         @include underline(50px auto 60px, $yellow);
+        @media (max-width: 767px) {
+            font-size: 4rem;
+        }
     }
     p {
         font-size: 1.8rem;
         font-weight: 700;
         margin-bottom: 30px;
+        @media (max-width: 767px) {
+            font-size: 1.3rem;
+        }
     }
     button {
         @include btn($white, transparent, $purple, $text, transparent, $text);
@@ -92,6 +105,9 @@ header {
         padding: 60px;
         color: $white;
         flex: 0 0 50%;
+        @media (max-width: 767px) {
+            flex: 0 0 100%;
+        }
         &:nth-child(1) {
             background-color: $gray1;
         }
@@ -129,24 +145,41 @@ header {
         @include flex(space-between, stretch);
         border-bottom: 2px solid rgba($text, 0.2);
         height: 450px;
+        @media (max-width: 767px) {
+            height: auto;
+            flex-direction: column;
+        }
         &:nth-child(even) {
             img {
                 order: 2;
+                @media (max-width: 767px) {
+                    order: 1;
+                }
             }
             div {
                 order: 1;
+                @media (max-width: 767px) {
+                    order: 2;
+                }
             }
         }
         img {
             flex: 0 0 40%;
             height: 100%;
             object-fit: cover;
+            @media (max-width: 767px) {
+                flex: 0 0 100%;
+            }
         }
         div {
+            @include flex(center, flex-start, column);
             flex: 0 0 60%;
             padding: 0px 90px;
             color: $text;
-            @include flex(center, flex-start, column);
+            @media (max-width: 767px) {
+                flex: 0 0 100%;
+                padding: 20px 30px;
+            }
             h3 {
                 font-size: 2.5rem;
                 @include underline(30px 0 30px, $text);
@@ -164,6 +197,9 @@ header {
     background-color: $yellow;
     text-align: center;
     color: $text;
+    @media (max-width: 767px) {
+        padding: 50px 0;
+    }
     h2 {
         font-size: 3rem;
         @include underline(30px auto, $text);
@@ -184,12 +220,18 @@ footer {
     background-color: $text;
     color: $white;
     padding: 70px 5% 60px;
+    @media (max-width: 767px) {
+        flex-direction: column;
+    }
     article {
         &:first-child {
             flex: 0 0 60%;
         }
         &:last-child {
             flex: 0 0 38%;
+            @media (max-width: 767px) {
+                margin-top: 30px;
+            }
         }
         h3 {
             font-size: 2rem;
