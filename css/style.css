@@ -1,0 +1,424 @@
+@import url("https://fonts.googleapis.com/css?family=Lato|Poppins:400,500,700&display=swap");
+/*----BASIC STYLE*/
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+p {
+  font-size: 1.3rem;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+/*---------------------------------*/
+/*----nav----*/
+nav {
+  background: -webkit-gradient(linear, left top, right top, from(#6e2594), to(#ecd444));
+  background: linear-gradient(to right, #6e2594, #ecd444);
+  padding: 20px 0;
+}
+
+nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+nav ul li {
+  color: #fff;
+  font-size: 1.3rem;
+  font-weight: 400;
+  margin: 0 50px;
+  -webkit-transition: 0.4s ease;
+  transition: 0.4s ease;
+}
+
+nav ul li:hover {
+  color: #6e2594;
+}
+
+nav ul li i {
+  font-size: 2.5rem;
+}
+
+/*----header----*/
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(110, 37, 148, 0.9)), to(rgba(110, 37, 148, 0.9))), url(../img/header.jpg);
+  background: linear-gradient(rgba(110, 37, 148, 0.9), rgba(110, 37, 148, 0.9)), url(../img/header.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  text-align: center;
+  color: #fff;
+}
+
+header h1 {
+  font-weight: 700;
+  font-size: 6rem;
+}
+
+header h1::after {
+  content: "";
+  display: block;
+  height: 5px;
+  width: 100px;
+  margin: 50px auto 60px;
+  background: #ecd444;
+}
+
+header p {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+header button {
+  padding: 20px 40px;
+  background: #fff;
+  border: 3px solid transparent;
+  color: #6e2594;
+  font-size: 1.7rem;
+  text-transform: uppercase;
+  font-family: "Lato", sans-serif;
+  cursor: pointer;
+  -webkit-transition: 0.4s ease;
+  transition: 0.4s ease;
+}
+
+header button:hover {
+  background-color: #444;
+  border: 3px solid transparent;
+  color: #444;
+}
+
+/*----services----*/
+.services {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.services article {
+  padding: 60px;
+  color: #fff;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 50%;
+          flex: 0 0 50%;
+}
+
+.services article:nth-child(1) {
+  background-color: #515365;
+}
+
+.services article:nth-child(2) {
+  background-color: #4e5062;
+}
+
+.services article:nth-child(3) {
+  background-color: #4b4d5e;
+}
+
+.services article:nth-child(4) {
+  background-color: #484a5a;
+}
+
+.services article h3 {
+  color: #ecd444;
+  font-size: 4rem;
+}
+
+.services article h4 {
+  font-size: 2rem;
+  font-family: "Poppins", sans-serif;
+}
+
+.services article p {
+  font-size: 1.2rem;
+  margin: 40px 0;
+}
+
+.services article button {
+  padding: 20px 40px;
+  background: transparent;
+  border: 3px solid #ecd444;
+  color: #ecd444;
+  font-size: 1.7rem;
+  text-transform: uppercase;
+  font-family: "Lato", sans-serif;
+  cursor: pointer;
+  -webkit-transition: 0.4s ease;
+  transition: 0.4s ease;
+}
+
+.services article button:hover {
+  background-color: #6e2594;
+  border: 3px solid #6e2594;
+  color: #fff;
+}
+
+/*----model----*/
+.model article {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  border-bottom: 2px solid rgba(68, 68, 68, 0.2);
+  height: 450px;
+}
+
+.model article:nth-child(even) img {
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+}
+
+.model article:nth-child(even) div {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+}
+
+.model article img {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 40%;
+          flex: 0 0 40%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.model article div {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 60%;
+          flex: 0 0 60%;
+  padding: 0px 90px;
+  color: #444;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.model article div h3 {
+  font-size: 2.5rem;
+}
+
+.model article div h3::after {
+  content: "";
+  display: block;
+  height: 5px;
+  width: 100px;
+  margin: 30px 0 30px;
+  background: #444;
+}
+
+.model article div p {
+  font-size: 1.3rem;
+}
+
+/*----cta----*/
+.cta {
+  padding: 100px 0 80px;
+  background-color: #ecd444;
+  text-align: center;
+  color: #444;
+}
+
+.cta h2 {
+  font-size: 3rem;
+}
+
+.cta h2::after {
+  content: "";
+  display: block;
+  height: 5px;
+  width: 100px;
+  margin: 30px auto;
+  background: #444;
+}
+
+.cta p {
+  font-size: 1.3rem;
+  font-weight: 500;
+  margin-bottom: 30px;
+}
+
+.cta button {
+  padding: 20px 40px;
+  background: #6e2594;
+  border: 3px solid transparent;
+  color: #fff;
+  font-size: 1.7rem;
+  text-transform: uppercase;
+  font-family: "Lato", sans-serif;
+  cursor: pointer;
+  -webkit-transition: 0.4s ease;
+  transition: 0.4s ease;
+}
+
+.cta button:hover {
+  background-color: #444;
+  border: 3px solid transparent;
+  color: #fff;
+}
+
+/*----footer----*/
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  background-color: #444;
+  color: #fff;
+  padding: 70px 5% 60px;
+}
+
+footer article:first-child {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 60%;
+          flex: 0 0 60%;
+}
+
+footer article:last-child {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 38%;
+          flex: 0 0 38%;
+}
+
+footer article h3 {
+  font-size: 2rem;
+}
+
+footer article h3::after {
+  content: "";
+  display: block;
+  height: 5px;
+  width: 100px;
+  margin: 30px 0;
+  background: #ecd444;
+}
+
+footer article button {
+  padding: 20px 40px;
+  background: transparent;
+  border: 3px solid #ecd444;
+  color: #ecd444;
+  font-size: 1.7rem;
+  text-transform: uppercase;
+  font-family: "Lato", sans-serif;
+  cursor: pointer;
+  -webkit-transition: 0.4s ease;
+  transition: 0.4s ease;
+  margin-top: 30px;
+}
+
+footer article button:hover {
+  background-color: #6e2594;
+  border: 3px solid #6e2594;
+  color: #fff;
+}
+
+footer article li {
+  font-size: 1.3rem;
+  line-height: 2;
+}
+
+footer article li i {
+  margin-right: 5px;
+}
+/*# sourceMappingURL=style.css.map */

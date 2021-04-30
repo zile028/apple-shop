@@ -1,0 +1,42 @@
+// MIXINS
+@mixin flex($justify, $align, $direction: row) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: $direction;
+}
+
+@mixin bgBasic($position: center, $size: cover) {
+    background-position: $position;
+    background-size: $size;
+    background-repeat: no-repeat;
+}
+
+@mixin btn($bgColor, $borderColor, $txtColor, $bgHover, $borderHover, $txtHover) {
+    padding: 20px 40px;
+    background: $bgColor;
+    border: 3px solid $borderColor;
+    color: $txtColor;
+    font-size: 1.7rem;
+    text-transform: uppercase;
+    font-family: $lato;
+    cursor: pointer;
+    transition: $transition;
+    &:hover {
+        background-color: $bgHover;
+        border: 3px solid $borderHover;
+        color: $txtHover;
+    }
+}
+
+@mixin underline($margin, $bgColor) {
+    &::after {
+        content: "";
+        display: block;
+        height: 5px;
+        width: 100px;
+        margin: $margin;
+        background: $bgColor;
+    }
+}

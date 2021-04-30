@@ -1,0 +1,210 @@
+@import "mixins";
+@import url("https://fonts.googleapis.com/css?family=Lato|Poppins:400,500,700&display=swap");
+
+$gray1: #515365;
+$gray2: #4e5062;
+$gray3: #4b4d5e;
+$gray4: #484a5a;
+$purple: rgb(110, 37, 148);
+$yellow: #ecd444;
+$white: #fff;
+$text: #444;
+$transition: 0.4s ease;
+$fontSize: 16px;
+$lato: "Lato", sans-serif;
+$poppins: "Poppins", sans-serif;
+/*----BASIC STYLE*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-size: $fontSize;
+    font-family: $poppins;
+    font-weight: 400;
+    line-height: 1.6;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+p {
+    font-size: 1.3rem;
+}
+ul {
+    list-style: none;
+}
+img {
+    width: 100%;
+    display: block;
+}
+/*---------------------------------*/
+/*----nav----*/
+nav {
+    background: linear-gradient(to right, $purple, $yellow);
+    padding: 20px 0;
+    ul {
+        @include flex(center, center);
+        li {
+            color: $white;
+            font-size: 1.3rem;
+            font-weight: 400;
+            margin: 0 50px;
+            transition: $transition;
+            &:hover {
+                color: $purple;
+            }
+            i {
+                font-size: 2.5rem;
+            }
+        }
+    }
+}
+
+/*----header----*/
+header {
+    @include flex(center, center, column);
+    background: linear-gradient(rgba($purple, 0.9), rgba($purple, 0.9)), url(../img/header.jpg);
+    @include bgBasic;
+    height: 100vh;
+    text-align: center;
+    color: $white;
+    h1 {
+        font-weight: 700;
+        font-size: 6rem;
+        @include underline(50px auto 60px, $yellow);
+    }
+    p {
+        font-size: 1.8rem;
+        font-weight: 700;
+        margin-bottom: 30px;
+    }
+    button {
+        @include btn($white, transparent, $purple, $text, transparent, $text);
+    }
+}
+
+/*----services----*/
+.services {
+    @include flex(space-between, stretch);
+    article {
+        padding: 60px;
+        color: $white;
+        flex: 0 0 50%;
+        &:nth-child(1) {
+            background-color: $gray1;
+        }
+        &:nth-child(2) {
+            background-color: $gray2;
+        }
+        &:nth-child(3) {
+            background-color: $gray3;
+        }
+        &:nth-child(4) {
+            background-color: $gray4;
+        }
+
+        h3 {
+            color: $yellow;
+            font-size: 4rem;
+        }
+        h4 {
+            font-size: 2rem;
+            font-family: $poppins;
+        }
+        p {
+            font-size: 1.2rem;
+            margin: 40px 0;
+        }
+        button {
+            @include btn(transparent, $yellow, $yellow, $purple, $purple, $white);
+        }
+    }
+}
+
+/*----model----*/
+.model {
+    article {
+        @include flex(space-between, stretch);
+        border-bottom: 2px solid rgba($text, 0.2);
+        height: 450px;
+        &:nth-child(even) {
+            img {
+                order: 2;
+            }
+            div {
+                order: 1;
+            }
+        }
+        img {
+            flex: 0 0 40%;
+            height: 100%;
+            object-fit: cover;
+        }
+        div {
+            flex: 0 0 60%;
+            padding: 0px 90px;
+            color: $text;
+            @include flex(center, flex-start, column);
+            h3 {
+                font-size: 2.5rem;
+                @include underline(30px 0 30px, $text);
+            }
+            p {
+                font-size: 1.3rem;
+            }
+        }
+    }
+}
+
+/*----cta----*/
+.cta {
+    padding: 100px 0 80px;
+    background-color: $yellow;
+    text-align: center;
+    color: $text;
+    h2 {
+        font-size: 3rem;
+        @include underline(30px auto, $text);
+    }
+    p {
+        font-size: 1.3rem;
+        font-weight: 500;
+        margin-bottom: 30px;
+    }
+    button {
+        @include btn($purple, transparent, $white, $text, transparent, $white);
+    }
+}
+
+/*----footer----*/
+footer {
+    @include flex(space-between, flex-start);
+    background-color: $text;
+    color: $white;
+    padding: 70px 5% 60px;
+    article {
+        &:first-child {
+            flex: 0 0 60%;
+        }
+        &:last-child {
+            flex: 0 0 38%;
+        }
+        h3 {
+            font-size: 2rem;
+            @include underline(30px 0, $yellow);
+        }
+        button {
+            @include btn(transparent, $yellow, $yellow, $purple, $purple, $white);
+            margin-top: 30px;
+        }
+        li {
+            font-size: 1.3rem;
+            line-height: 2;
+            i {
+                margin-right: 5px;
+            }
+        }
+    }
+}
